@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yus.Mirai", "Yus.Mirai\Yus.Mirai.csproj", "{448E3798-EA86-4AE8-8B87-4961C150B7FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yus.Mirai.Tester", "Yus.Mirai.Tester\Yus.Mirai.Tester.csproj", "{AA2DCB71-E3B8-47A6-A3DA-931E07BE2525}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{448E3798-EA86-4AE8-8B87-4961C150B7FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{448E3798-EA86-4AE8-8B87-4961C150B7FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{448E3798-EA86-4AE8-8B87-4961C150B7FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{448E3798-EA86-4AE8-8B87-4961C150B7FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA2DCB71-E3B8-47A6-A3DA-931E07BE2525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA2DCB71-E3B8-47A6-A3DA-931E07BE2525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA2DCB71-E3B8-47A6-A3DA-931E07BE2525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA2DCB71-E3B8-47A6-A3DA-931E07BE2525}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {828EC701-A48A-482F-99CA-C753162E400A}
+	EndGlobalSection
+EndGlobal
