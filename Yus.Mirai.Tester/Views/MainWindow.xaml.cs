@@ -1,6 +1,9 @@
-﻿using System;
+﻿using HandyControl.Controls;
+using HandyControl.Tools.Extension;
+using System;
 using System.Collections.ObjectModel;
 using Yus.Mirai.Tester.Apps;
+using Yus.Mirai.Tester.Controls;
 using Yus.Mirai.Tester.Data.VM;
 using Yus.Mirai.Utilities;
 
@@ -108,11 +111,21 @@ namespace Yus.Mirai.Tester.Views
         /// </summary>
         public bool IsServerConnect { get => isServerConnect; set => Set(ref isServerConnect, value, nameof(IsServerConnect)); }
 
+        #region Friends
+
         private ObservableCollection<FriendItem> friends;
         /// <summary>
         /// 好友列表
         /// </summary>
         public ObservableCollection<FriendItem> Friends { get => friends; set => Set(ref friends, value, nameof(friends)); }
+
+        private string friendSendMessage;
+        /// <summary>
+        /// 好友发送消息
+        /// </summary>
+        public string FriendSendMessage { get => friendSendMessage; set => Set(ref friendSendMessage, value, nameof(FriendSendMessage)); }
+
+        #endregion Friends
 
         #endregion Building Properties
 
@@ -203,6 +216,10 @@ namespace Yus.Mirai.Tester.Views
 
                 // 好友
                 case "获取好友列表": GetFriendList(); break;
+                case "好友-复制": View.TxtFriendMsg.Copy(); break;
+                case "好友-粘贴": View.TxtFriendMsg.Paste(); break;
+                case "好友-剪切": View.TxtFriendMsg.Cut(); break;
+                case "好友-插入表情": FriendsInsertFace(); break;
 
                 default: break;
             }
@@ -331,6 +348,15 @@ namespace Yus.Mirai.Tester.Views
             }
 
             Log(resp.Data.ToJson(Newtonsoft.Json.Formatting.Indented));
+        }
+
+        public async void FriendsInsertFace()
+        {
+            var cqcode = await Dialog.Show<FaceSelectorView>().GetResultAsync<string>();
+            if (!string.IsNullOrWhiteSpace(cqcode))
+            {
+                View.TxtFriendMsg.Text = View.TxtFriendMsg.Text.Insert(View.TxtFriendMsg.SelectionStart, cqcode);
+            }
         }
 
         #endregion Command Methods

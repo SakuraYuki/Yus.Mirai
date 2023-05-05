@@ -1,5 +1,5 @@
-﻿using System;
-using System.Windows;
+﻿using HandyControl.Controls;
+using System;
 using Yus.Mirai.Data;
 
 namespace Yus.Mirai.Tester.Data.UI
